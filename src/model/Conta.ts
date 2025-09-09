@@ -1,5 +1,5 @@
 
-export class Conta {
+export abstract class Conta {
     numero: number;
     titular: string;
     saldo: number;

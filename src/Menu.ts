@@ -4,19 +4,9 @@ import { Conta } from "./model/Conta";
 
 export class Menu {
     static main(): void {
-        const conta1 = new Conta(1, "Matheus", 1000);
-        const conta2 = new Conta(2, "Henrique", 500);
+    
 
-        console.log(Colors.FgYellow + "\n--- Testes das contas ---\n" + Colors.Reset);
-        conta1.visualizar();
-        conta2.visualizar();
-
-        conta1.depositar(200);
-        conta2.sacar(100);
-
-        conta1.visualizar();
-        conta2.visualizar();
-
+    
         let opcao: number;
 
         do {
