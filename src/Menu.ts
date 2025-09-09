@@ -1,9 +1,22 @@
-
 import * as readlineSync from "readline-sync";
 import { Colors } from "./util/Colors";
+import { Conta } from "./model/Conta";
 
 export class Menu {
     static main(): void {
+        const conta1 = new Conta(1, "Matheus", 1000);
+        const conta2 = new Conta(2, "Henrique", 500);
+
+        console.log(Colors.FgYellow + "\n--- Testes das contas ---\n" + Colors.Reset);
+        conta1.visualizar();
+        conta2.visualizar();
+
+        conta1.depositar(200);
+        conta2.sacar(100);
+
+        conta1.visualizar();
+        conta2.visualizar();
+
         let opcao: number;
 
         do {
@@ -37,23 +50,18 @@ export class Menu {
                     break;
                 case 4:
                     console.log("\nAtualizar dados da conta\n");
-
                     break;
                 case 5:
                     console.log("\nApagar uma conta\n");
-
                     break;
                 case 6:
                     console.log("\nSaque\n");
-
                     break;
                 case 7:
                     console.log("\nDepósito\n");
-
                     break;
                 case 8:
                     console.log("\nTransferir valores entre contas\n");
-
                     break;
                 case 9:
                     console.log("\nBanco dos Bancos - aqui tem muito dinheiro!");
